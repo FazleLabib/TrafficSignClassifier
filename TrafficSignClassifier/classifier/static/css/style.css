@@ -24,33 +24,33 @@ main {
 
 .upload-form {
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 20px;
-  width: 350px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  width: 21.875rem;
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0.125rem solid rgba(255, 255, 255, 0.3);
 }
 
 .preview-image {
   max-width: 100%;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .upload-panel {
   width: 100%;
-  min-height: 200px;
-  border: 2px dashed rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  min-height: 12.5rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.5);
+  border-radius: 0.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
   position: relative;
@@ -61,7 +61,7 @@ main {
 }
 
 .upload-panel img.upload-icon {
-  max-width: 100px;
+  max-width: 6.25rem;
 }
 
 .upload-panel:hover {
@@ -71,7 +71,7 @@ main {
 .upload-panel img.preview-image {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -90,9 +90,9 @@ main {
 }
 
 .upload-content p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   text-align: center;
 }
 
@@ -119,9 +119,9 @@ main {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.625rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
