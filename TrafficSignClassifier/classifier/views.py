@@ -13,5 +13,4 @@ def classify(request):
     else:
         form = ImageUploadForm()
         
-    return render(request, 'upload.html', {'form': form})
-
+    return render(request, 'home.html', {'form': form})
