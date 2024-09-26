@@ -9,7 +9,7 @@ def classify(request):
             image = form.cleaned_data['image']
 
             result = classify_image(image)
-            return render(request, 'upload.html', {'form': form, 'result': result})
+            return render(request, 'home.html', {'form': form, 'result': result})
     else:
         form = ImageUploadForm()
         
