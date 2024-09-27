@@ -8,8 +8,8 @@ def classify(request):
         if form.is_valid():
             image = form.cleaned_data['image']
 
-            result = classify_image(image)
-            return render(request, 'home.html', {'form': form, 'result': result})
+            result, confidence = classify_image(image)
+            return render(request, 'home.html', {'form': form, 'result': result, 'confidence': confidence})
     else:
         form = ImageUploadForm()
         

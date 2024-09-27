@@ -2,6 +2,7 @@ import torch
 from torchvision.transforms import Compose, Resize, ToTensor
 from PIL import Image
 from .models import GTSRB_MODEL
+import torch.nn.functional as F
 
 classes = { 
     0: 'Speed limit (20km/h)',
@@ -69,6 +70,7 @@ def classify_image(image_path):
     
     with torch.no_grad():
         output = model(image)
-        _, predicted = torch.max(output, 1)
+        probabilities = F.softmax(output, dim=1)
+        confidence, predicted = torch.max(probabilities, 1)
     
-    return classes[predicted.item()]
+    return classes[predicted.item()], "%0.2f" % (confidence.item(),)
