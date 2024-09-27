@@ -132,6 +132,12 @@ main {
   margin-bottom: 2rem;
 }
 
+#result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .results-icon {
   border: 0.125rem dashed var(--color-white-dashed);
   border-radius: 0.625rem;
@@ -163,4 +169,25 @@ main {
 
 .buttons button:hover {
   background-color: var(--color-white-hover);
+}
+
+#stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#label,
+#confidence {
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+#label {
+  background-color: var(--color-secondary);
+}
+
+#confidence {
+  background-color: var(--color-accent);
 }
