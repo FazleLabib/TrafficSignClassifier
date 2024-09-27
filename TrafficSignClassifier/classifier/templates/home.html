@@ -17,7 +17,7 @@
       <div class="panel">
         <form method="post" enctype="multipart/form-data" class="upload-form">
           {% csrf_token %}
-          <div class="upload-panel" id="upload-panel">
+          <div id="upload-panel">
             <input id="file-input" type="file" name="image" accept="image/*" hidden>
             <label for="file-input" class="upload-area">
               <div class="upload-content">
@@ -35,15 +35,17 @@
         </form>
       </div>
 
-      
-      {% if label %}
       <div class="panel" id="result">
+      {% if label %}
+      
         <h3>Prediction Result:</h3>
         <img src="{{ meta_url }}" alt="Image of {{ label }}">
         <p>{{ label }}</p>
         <p>{{ confidence }}</p>
-      </div>
+      {% else %}
+        <p>Results will be displayed here.</p> 
       {% endif %}
+    </div>
     </div>
   </main>
 
