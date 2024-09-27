@@ -72,5 +72,4 @@ def classify_image(image_path):
         output = model(image)
         probabilities = F.softmax(output, dim=1)
         confidence, predicted = torch.max(probabilities, 1)
-    
-    return classes[predicted.item()], "%0.2f" % (confidence.item(),)
+    return classes[predicted.item()], "%0.2f" % (confidence.item(),), predicted.item()

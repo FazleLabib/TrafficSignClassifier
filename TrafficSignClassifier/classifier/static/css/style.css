@@ -37,7 +37,7 @@ main {
   gap: 2rem;
 }
 
-.upload-form {
+.panel {
   background: var(--color-white-transparent);
   border-radius: 1.25rem;
   padding: 1.25rem;
