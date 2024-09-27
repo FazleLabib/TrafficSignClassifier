@@ -39,11 +39,11 @@
       {% if label %}
       
         <h3>Prediction Result:</h3>
-        <img src="{{ meta_url }}" alt="Image of {{ label }}">
+        <img class="results-icon" src="{{ meta_url }}" alt="Image of {{ label }}">
         <p>{{ label }}</p>
         <p>{{ confidence }}</p>
       {% else %}
-        <p>Results will be displayed here.</p> 
+      <img class="results-icon" id="results-placeholder" src="{% static 'media/icons/results-icon.svg' %}" alt="Results icon">
       {% endif %}
     </div>
     </div>
