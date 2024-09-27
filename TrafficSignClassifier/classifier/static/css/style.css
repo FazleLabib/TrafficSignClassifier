@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
+  --color-primary: #4c3fc1;
+  --color-secondary: #9388f0;
+  --color-accent: #ff476d;
   --color-light-blue: #c3cfe2;
   --color-light-gray: #e2e2e2;
+  --color-text-primary: #3d3b3f;
+  --color-text-secondary: #fff;
   --color-white-transparent: rgba(255, 255, 255, 0.2);
   --color-white-dashed: rgba(255, 255, 255, 0.5);
   --color-white-hover: rgba(255, 255, 255, 0.3);
-  --color-text-white: #fff;
-  --color-blue: #00f;
   --shadow-light: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 
@@ -30,6 +33,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.header {
+  color: var(--color-text-primary);
 }
 
 .form-container {
@@ -101,20 +108,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-text-white);
+  color: var(--color-text-secondary);
   text-align: center;
   cursor: pointer;
 }
 
 .upload-content p {
   font-size: 1rem;
-  color: var(--color-text-white);
+  color: var(--color-text-primary);
   margin-top: 0.625rem;
   text-align: center;
 }
 
 .upload-content p span {
-  color: var(--color-blue);
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
@@ -123,6 +130,16 @@ main {
   aspect-ratio: 1;
   opacity: 0.5;
   margin-bottom: 2rem;
+}
+
+.results-icon {
+  border: 0.125rem dashed var(--color-white-dashed);
+  border-radius: 0.625rem;
+  padding: 1rem;
+}
+
+#results-placeholder {
+  opacity: 0.5;
 }
 
 .buttons {
@@ -136,7 +153,7 @@ main {
   width: 100%;
   background-color: var(--color-white-transparent);
   border: none;
-  color: var(--color-text-white);
+  color: var(--color-text-secondary);
   font-size: 1rem;
   padding: 0.85rem 1.25rem;
   border-radius: 0.625rem;
