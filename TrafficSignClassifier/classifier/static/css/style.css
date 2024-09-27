@@ -157,14 +157,33 @@ main {
 
 .buttons button {
   width: 100%;
-  background-color: var(--color-white-transparent);
   border: none;
-  color: var(--color-text-secondary);
   font-size: 1rem;
   padding: 0.85rem 1.25rem;
   border-radius: 0.625rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#upload-button {
+  border: 0.125rem solid transparent;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+}
+
+#upload-button:hover {
+  border: 0.125rem solid var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+#clear-button {
+  background-color: transparent;
+  border: 0.125rem solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+#clear-button:hover {
+  background-color: var(--color-white-hover);
 }
 
 .buttons button:hover {
