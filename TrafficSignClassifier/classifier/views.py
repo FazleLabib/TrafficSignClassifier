@@ -12,8 +12,9 @@ def classify(request):
 
             label, confidence, class_val = classify_image(image)
             meta_url = static('media/meta/' + str(class_val) + '.png') 
-
-            return render(request, 'home.html', {'form': form, 'label': label, 'confidence': confidence, 'meta_url': meta_url})
+            confidence_percentage = float(confidence) * 100
+            confidence_str = f"{confidence_percentage}%"
+            return render(request, 'home.html', {'form': form, 'label': label, 'confidence': confidence_str, 'meta_url': meta_url})
     else:
         form = ImageUploadForm()
         
