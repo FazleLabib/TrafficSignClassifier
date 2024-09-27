@@ -1,5 +1,20 @@
+:root {
+  --color-light-blue: #c3cfe2;
+  --color-light-gray: #e2e2e2;
+  --color-white-transparent: rgba(255, 255, 255, 0.2);
+  --color-white-dashed: rgba(255, 255, 255, 0.5);
+  --color-white-hover: rgba(255, 255, 255, 0.3);
+  --color-text-white: #fff;
+  --color-blue: #00f;
+  --shadow-light: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+}
+
 body {
-  background: linear-gradient(135deg, #c3cfe2, #e2e2e2);
+  background: linear-gradient(
+    135deg,
+    var(--color-light-blue),
+    var(--color-light-gray)
+  );
   font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
@@ -23,14 +38,14 @@ main {
 }
 
 .upload-form {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-white-transparent);
   border-radius: 1.25rem;
   padding: 1.25rem;
   width: 21.875rem;
-  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-light);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 0.125rem solid rgba(255, 255, 255, 0.3);
+  border: 0.125rem solid var(--color-white-hover);
 }
 
 .preview-image {
@@ -43,7 +58,7 @@ main {
 .upload-panel {
   width: 100%;
   min-height: 12.5rem;
-  border: 0.125rem dashed rgba(255, 255, 255, 0.5);
+  border: 0.125rem dashed var(--color-white-dashed);
   border-radius: 0.625rem;
   display: flex;
   justify-content: center;
@@ -51,7 +66,7 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-bottom: 0.9375rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-white-transparent);
   overflow: hidden;
   position: relative;
 }
@@ -65,7 +80,7 @@ main {
 }
 
 .upload-panel:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-white-hover);
 }
 
 .upload-panel img.preview-image {
@@ -84,20 +99,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--color-text-white);
   text-align: center;
   cursor: pointer;
 }
 
 .upload-content p {
   font-size: 1rem;
-  color: #fff;
+  color: var(--color-text-white);
   margin-top: 0.625rem;
   text-align: center;
 }
 
 .upload-content p span {
-  color: #00f;
+  color: var(--color-blue);
   text-decoration: underline;
 }
 
@@ -116,9 +131,9 @@ main {
 
 .buttons button {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-white-transparent);
   border: none;
-  color: white;
+  color: var(--color-text-white);
   font-size: 1rem;
   padding: 0.625rem 1.25rem;
   border-radius: 0.625rem;
@@ -127,5 +142,5 @@ main {
 }
 
 .buttons button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-white-hover);
 }
