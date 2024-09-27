@@ -136,7 +136,7 @@ main {
   border: none;
   color: var(--color-text-white);
   font-size: 1rem;
-  padding: 0.625rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   border-radius: 0.625rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
