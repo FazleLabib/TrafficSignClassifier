@@ -42,6 +42,7 @@ main {
   border-radius: 1.25rem;
   padding: 1.25rem;
   width: 21.875rem;
+  aspect-ratio: 1;
   box-shadow: var(--shadow-light);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -55,9 +56,8 @@ main {
   box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
-.upload-panel {
-  width: 100%;
-  min-height: 12.5rem;
+#upload-panel {
+  aspect-ratio: 1;
   border: 0.125rem dashed var(--color-white-dashed);
   border-radius: 0.625rem;
   display: flex;
@@ -120,6 +120,7 @@ main {
   width: 5rem;
   aspect-ratio: 1;
   opacity: 0.5;
+  margin-bottom: 2rem;
 }
 
 .buttons {
