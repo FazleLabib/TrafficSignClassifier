@@ -40,7 +40,11 @@
         <img class="results-icon" src="{{ meta_url }}" alt="Image of {{ label }}">
         <div id="stats">
           <p id="label">{{ label }}</p>
-          <p id="confidence">{{ confidence }}</p>
+          <div id="confidence">
+            <img src="{% static 'media/icons/pie-icon.svg' %}" alt="Confidence score icon">
+            <div id="confidence-divider"></div>
+            <p id="confidence-value">{{ confidence }}</p>
+          </div>
         </div>
       {% else %}
       <img class="results-icon" id="results-placeholder" src="{% static 'media/icons/results-icon.svg' %}" alt="Results icon">

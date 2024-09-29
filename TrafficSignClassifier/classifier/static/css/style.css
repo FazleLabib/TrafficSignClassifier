@@ -199,14 +199,45 @@ main {
 #label,
 #confidence {
   padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
   color: var(--color-text-secondary);
 }
 
 #label {
+  position: relative;
+  border-radius: 0.45rem 0 0 0.45rem;
   background-color: var(--color-secondary);
 }
 
+#label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  transform: translateY(-50%);
+  border-top: 1.12rem solid transparent;
+  border-bottom: 1.12rem solid transparent;
+  border-left: 1rem solid var(--color-secondary);
+  border-radius: 0 5rem 5rem 0;
+}
+
 #confidence {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 1.5rem;
   background-color: var(--color-accent);
+}
+
+#confidence img {
+  width: 1.05rem;
+  aspect-ratio: 1;
+}
+
+#confidence p {
+  margin: 0;
+}
+
+#confidence-divider {
+  border-left: 1px solid white; 
+  height: 1rem;
 }
