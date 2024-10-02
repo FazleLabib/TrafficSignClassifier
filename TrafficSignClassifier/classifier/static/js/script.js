@@ -28,17 +28,13 @@ function handleFileSelect() {
             previewImage.className = 'preview-image';
 
             // Clear existing preview and add new one
-            const existingImage = uploadPanel.querySelector('.preview-image');
-            if (existingImage) {
-                uploadPanel.removeChild(existingImage);
+            const uploadContent = uploadPanel.querySelector('.upload-content');
+            if (uploadContent) {
+                uploadContent.remove();
             }
+
             uploadPanel.appendChild(previewImage);
-            
             // Hide the existing text and icon in the upload panel
-            const textElements = uploadPanel.querySelectorAll('.upload-text');
-            textElements.forEach((text) => {
-                text.style.display = 'none';
-            });
         };
         reader.readAsDataURL(file);
     }
@@ -46,16 +42,6 @@ function handleFileSelect() {
 
 // Clear button functionality
 clearButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    fileInput.value = '';
-    const existingImage = uploadPanel.querySelector('.preview-image');
-    if (existingImage) {
-        uploadPanel.removeChild(existingImage);
-    }
-
     // Show the existing text and icon in the upload panel again
-    const textElements = uploadPanel.querySelectorAll('.upload-text');
-    textElements.forEach((text) => {
-        text.style.display = 'block';
-    });
+    location.replace(location.href);
 });
