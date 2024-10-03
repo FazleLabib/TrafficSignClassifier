@@ -12,6 +12,15 @@
 
 <body>
   <main>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round">
+          <img id="dark-mode-icon" src="{% static 'media/icons/dark-mode-icon.svg' %}" alt="Dark Mode Icon" style="display: none;">
+          <img id="light-mode-icon" src="{% static 'media/icons/light-mode-icon.svg' %}" alt="Light Mode Icon">
+        </span>
+      </label>
+    </div>
     <h1 class="header">⚠️ Traffic Sign Classifier ⚠️</h1>
     <div class="form-container">
       <div class="panel" id="upload">
