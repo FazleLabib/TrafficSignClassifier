@@ -34,6 +34,18 @@ body.dark-mode {
   );
 }
 
+:root, body.dark-mode {
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+.panel, .upload-panel, .upload-icon, .results-icon, #stats, .header {
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.upload-icon, .results-icon {
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
 body {
   background: linear-gradient(
     135deg,
