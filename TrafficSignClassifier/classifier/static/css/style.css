@@ -310,6 +310,19 @@ main {
   position: absolute;
 }
 
+.error-messages {
+  margin-bottom: 1rem;
+  color: red;
+}
+
+.error {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background-color: #ffdada;
+  border: 1px solid #ff5c5c;
+  border-radius: 0.25rem;
+}
+
 @media (max-width: 800px) {
   body {
     background: var(--color-light-blue);
