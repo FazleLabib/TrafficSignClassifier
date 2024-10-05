@@ -2,7 +2,7 @@
 
 A web app for classifying traffic signs using a deep learning model trained on the ``German Traffic Sign Recognition Benchmark (GTSRB)`` dataset.
 
-![Traffic Sign Classifier Preview](images\preview.png)
+![Traffic Sign Classifier Preview](images/preview.png)
 
 ---
 
