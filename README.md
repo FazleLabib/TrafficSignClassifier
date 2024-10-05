@@ -54,7 +54,7 @@ Ensure you have the following installed:
 - **Python==3.12.3+**
 - **Django==5.1.1+**
 - **torch==2.4.1+cu118**
-- **pillow==10.2.0**
+- **pillow>=10.3.0**
 
 ### **Installation**
 
