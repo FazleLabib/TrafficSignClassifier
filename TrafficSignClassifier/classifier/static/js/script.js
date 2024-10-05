@@ -1,6 +1,8 @@
 const uploadPanel = document.getElementById('upload-panel');
 const fileInput = document.getElementById('file-input');
 const clearButton = document.getElementById('clear-button');
+const aboutIcon = document.getElementById('about-icon');
+const aboutModal = document.getElementById('about-modal');
 
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("theme-toggle");
@@ -66,4 +68,14 @@ function handleFileSelect() {
 
 clearButton.addEventListener('click', (e) => {
     location.replace(location.href);
+});
+
+aboutIcon.addEventListener('click', function () {
+    aboutModal.classList.toggle('show');
+});
+
+window.addEventListener('click', function (e) {
+    if (!aboutIcon.contains(e.target) && !aboutModal.contains(e.target)) {
+        aboutModal.classList.remove('show');
+    }
 });

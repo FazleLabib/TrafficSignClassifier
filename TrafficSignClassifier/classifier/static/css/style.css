@@ -66,7 +66,8 @@ body.dark-mode .upload-icon {
   filter: brightness(1.2);
 }
 
-body.dark-mode .results-icon {
+body.dark-mode .results-icon,
+body.dark-mode .about-icon {
   opacity: 0.8;
   filter: brightness(1.8);
 }
@@ -284,6 +285,52 @@ main {
 #confidence-divider {
   border-left: 1px solid white;
   height: 1rem;
+}
+
+.about-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.about-icon img {
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+.about-modal {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  background-color: var(--color-light-gray);
+  color: var(--color-text-primary);
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-light);
+  display: none;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.about-modal.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.modal-content a {
+  color: var(--color-accent);
 }
 
 .theme-toggle {

@@ -13,15 +13,30 @@
 
 <body>
   <main>
-    <div class="theme-toggle">
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider round">
-          <img id="dark-mode-icon" src="{% static 'media/icons/dark-mode-icon.svg' %}" alt="Dark Mode Icon" style="display: none;">
-          <img id="light-mode-icon" src="{% static 'media/icons/light-mode-icon.svg' %}" alt="Light Mode Icon">
-        </span>
-      </label>
-    </div>
+    <div class="theme-about-container">
+      <div class="theme-toggle">
+          <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider">
+                  <img src="{% static '/media/icons/dark-mode-icon.svg' %}" id="dark-mode-icon">
+                  <img src="{% static '/media/icons/light-mode-icon.svg' %}" id="light-mode-icon" style="display: none;">
+              </span>
+          </label>
+      </div>
+
+      <div class="about-icon" id="about-icon">
+          <img src="{% static '/media/icons/about-icon.svg' %}" alt="About icon">
+      </div>
+  
+      <div class="about-modal" id="about-modal">
+          <div class="modal-content">
+              <p>This is a Traffic Sign Classifier web application. You can upload an image of a traffic sign, and it will classify it.</p>
+              <p>The classification model is built on the GTSRB dataset and can classifiy only the 43 type of traffic signs available on the dataset.</p>
+              <p>The project code is available at this <a href="https://github.com/FazleLabib/TrafficSignClassifier">link</a></p>
+          </div>
+      </div>
+  </div>
+
     <h1 class="header">⚠️ Traffic Sign Classifier ⚠️</h1>
     <div class="form-container">
       <div class="panel" id="upload">
